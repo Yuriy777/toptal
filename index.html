@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TopTal</title>
+	<link media="all" rel="stylesheet" href="css/main.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.12.4.min.js" defer><\/script>')</script>
+	<script src="js/jquery.columnizer.js" defer></script>
+	<script src="js/main.js" defer></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1rt05I-zow72GJXZVcWKOAot0i6IcVtU&callback=initMap&libraries=places"	defer></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="container">
+				<div class="row">
+					<div class="hl-column">
+						<a href="#" class="menu-opener">
+							<span></span>
+						</a>
+						<span class="logo">
+							<a href="#">
+								<img src="images/logo.png" alt="toptal">
+								toptal
+							</a>
+						</span>
+						<span class="logo-desc">
+							Exclusive access to top developers
+						</span>
+					</div>
+					<div class="hr-column">
+						<span>Join toptall as</span>
+						<a href="#" class="btn-white">developer</a>
+						<a href="#" class="btn-white">company</a>
+						<a href="#" class="btn-info">login</a>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<nav class="general-nav">
+						<ul>
+							<li><a href="#">what</a></li>
+							<li><a href="#">why</a></li>
+							<li><a href="#">how</a></li>
+							<li><a href="#">clients</a></li>
+							<li><a href="#">team</a></li>
+							<li><a href="#">labs</a></li>
+							<li><a href="#">faq</a></li>
+							<li><a href="#">contact</a></li>
+						</ul>
+					</nav>
+					<div class="phone">Call us: <a href="tel:888-323-442">888.323.442</a></div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div class="p-date">
+					<div class="personal-info">
+						<div class="p-img block-1">
+							<span class="center-block add-file">Add <br/> profile image ...</span>
+							<div class="bl-addimg">
+								<div class="input-gr">
+									<p id="path"></p>
+									<label for="file"><span class="br-img">Browse image</span></label>
+									<input type="file" id="file" name="file" />
+								</div>
+								<span class="overlay"></span>
+							</div>
+							<span id="output"></span>
+						</div>
+						<div class="block-2">
+							<div class="form-group name-group">
+								<input type="text" id="name" placeholder="Add name">
+								<i class="fa fa-check-circle js-sendskill" aria-hidden="true"></i>
+								<h1></h1>
+							</div>
+							<div class="form-group map_settings">
+								<div id="locationField">
+									<input id="autocomplete" placeholder="Add location" type="text" />
+									<i class="fa fa-check-circle js-sendskill" aria-hidden="true"></i>
+								</div>
+							</div>
+							<div class="form-group ">
+								<input type="text" id="languages" placeholder="Add languages">
+								<i class="fa fa-check-circle js-sendskill" aria-hidden="true"></i>
+							</div>
+							<ul class="skills-block" id="skills-block">
+								<li id="plhItem"><strong class="skill-item"></strong><span class="wrapper-i"><i class="fa fa-times-circle js-remove" aria-hidden="true"></i></span></li>
+							</ul>
+							<div class="skills">
+								<div class="form-group skill-inp">
+									<input type="text" id="skills" autofocus>
+									<select id="tags" class="tags">
+										<option>strong</option>
+										<option>medium</option>
+										<option>low</option>
+									</select>
+									<i class="fa fa-check-circle js-sendskill" aria-hidden="true"></i>
+								</div>
+							</div>
+							<span class="inpsel">Add skill <i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+						</div>
+						<div class="block-1 info">
+							<div class="hb-button">
+								<button class="btn-black btn-radius">Save profile</button>
+								<button class="btn-grey btn-radius">Publish profile</button>
+								<p >(You can only publish a completed profile)</p>
+							</div>
+							<div class="resume">
+								<img src="images/file.png" alt="file">
+								<a href="#" class="btn-black btn-radius"><img src="images/upload.png" alt="upload"> Upload resume</a>
+							</div>
+						</div>
+					</div>
+					<div class="other-user-info">
+						<div class="block-1 js_toggle portf pr-h">
+							<h5>Portfolio</h5>
+							<p class="skills-text"></p>
+							<span class="center-block">Add content...</span>
+							<div class="input-date">
+								<div class="inline-group">
+									<input type="text" placeholder="Project name" class="proj-n">
+									<input type="text" placeholder="Skills used" maxlength="30" class="skill-u">
+								</div>
+								<div class="inline-group">
+									<input type="text" placeholder="Project name" class="proj-n">
+									<input type="text" placeholder="Skills used" maxlength="30" class="skill-u">
+								</div>
+								<div class="inline-group">
+									<input type="text" placeholder="Project name" class="proj-n">
+									<input type="text" placeholder="Skills used" maxlength="30" class="skill-u">
+								</div>
+								<div class="inline-group">
+									<input type="text" placeholder="Project name" class="proj-n">
+									<input type="text" placeholder="Skills used" maxlength="30" class="skill-u">
+								</div>
+								<div class="inline-group">
+									<input type="text" placeholder="Project name" class="proj-n">
+									<input type="text" placeholder="Skills used" maxlength="30" class="skill-u">
+								</div>
+								<div class="inline-group">
+									<input type="text" placeholder="Project name" class="proj-n">
+									<input type="text" placeholder="Skills used" maxlength="30" class="skill-u">
+								</div>
+								<div class="inline-group">
+									<input type="text" placeholder="Project name" class="proj-n">
+									<input type="text" placeholder="Skills used" maxlength="30" class="skill-u">
+								</div>
+								<i class="fa fa-check-circle js-close" aria-hidden="true"></i>
+							</div>
+							<div class="result-date">
+								<ul></ul>
+							</div>
+						</div>
+						<div class="block-1">
+							<h5>Experience</h5>
+							<span class="center-block">Add content...</span>
+						</div>
+						<div class="block-1">
+							<h5>Sample code and algoritms</h5>
+							<span class="center-block">Add content...</span>
+						</div>
+						<div class="block-1">
+							<div class="head-block">
+								<h5>Availability</h5>
+								<p class="b-text">Full time</p>
+							</div>
+							<div class="bottom-bl">
+								<h5>Preferred environment</h5>
+								<span class="center-block">Add content...</span>
+							</div>
+						</div>
+						<div class="block-1 js_toggle textar">
+							<h5>The most amazing ...</h5>
+							<span class="center-block">Add content...</span>
+							<div class="input-date">
+								<div class="inline-group">
+									<textarea name="text" placeholder="Tell us about the best software you have worked on ..."></textarea>
+								</div>
+								<i class="fa fa-check-circle js-close" aria-hidden="true"></i>
+							</div>
+							<div class="quote-block">
+								<div class="result-date">
+									<p></p>
+									<div class="b-name"><strong class="name-bq"></strong></div>
+								</div>
+							</div>
+						</div>
+						<div class="block-1">
+							<h5>In clients I look for ...</h5>
+							<span class="center-block">Add content...</span>
+							<div class="quote-block">
+
+							</div>
+						</div>
+						<div class="block-1">
+							<h5>Location</h5>
+							<span class="center-block">Add content...</span>
+							<div id="map"></div>
+							<div id="results-map" class="results-block">
+								<p></p>
+								<span class="corner"></span>
+								<i class="fa fa-plus-circle" aria-hidden="true"></i>
+							</div>
+						</div>
+						<div class="block-1">
+							<h5>Note</h5>
+							<span class="center-block">Add content...</span>
+							<div class="quote-block">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="about-block">
+					<h2>Let me introduce myself ...</h2>
+					<div class="wrap-block">
+						<div class="block-1">
+							<span class="center-block">Add content...</span>
+						</div>
+						<div class="block-1">
+							<span class="center-block">Add content...</span>
+						</div>
+						<div class="block-1">
+							<span class="center-block">Add content...</span>
+						</div>
+						<div class="block-1">
+							<span class="center-block">Add content...</span>
+						</div>
+					</div>
+					<div class="block-form">
+						<p><span>Important! Please also fill out the Q&A form </span><a href="#" class="btn-white btn-radius">Q&A Form</a></p>
+						<p class="sm-text">5 of 25 questions answered.</p>
+					</div>
+				</section>
+				<section class="top-skills">
+					<h3>Top skills on toptal</h3>
+					<ul class="skills-list">
+						<li>
+							<span class="tag">.</span>
+							<ul>
+								<li><a href="#">.Net Programmers</a></li>
+								<li><a href="#">3ds Max Engineers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">A</span>
+							<ul>
+								<li><a href="#">Administrative Assistant</a></li>
+								<li><a href="#">Advertising Consultants</a></li>
+								<li><a href="#">AJAX Programmers</a></li>
+								<li><a href="#">Amazon Web Serwices</a></li>
+								<li><a href="#">Android Programmers</a></li>
+								<li><a href="#">Animators</a></li>
+								<li><a href="#">Article Writes</a></li>
+								<li><a href="#">ASP Programmers</a></li>
+								<li><a href="#">ASP.NET Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">B</span>
+							<ul>
+								<li><a href="#">Blog Writers</a></li>
+								<li><a href="#">Bussiness Writers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">C</span>
+							<ul>
+								<li><a href="#">C Programmers</a></li>
+								<li><a href="#">Cocoa Programmers</a></li>
+								<li><a href="#">Content Writers</a></li>
+								<li><a href="#">Copiright Attorney</a></li>
+								<li><a href="#">Creative Writer</a></li>
+								<li><a href="#">CSS Programmers</a></li>
+								<li><a href="#">Customer Service Reps</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">D</span>
+							<ul>
+								<li><a href="#">Data Entry Experts</a></li>
+								<li><a href="#">DHTML Programmers</a></li>
+								<li><a href="#">Dot Net programmers</a></li>
+								<li><a href="#">Drupal Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">F</span>
+							<ul>
+								<li><a href="#">Flash Designers</a></li>
+								<li><a href="#">Foursquare Programmers</a></li>
+								<li><a href="#">French </a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">G</span>
+							<ul>
+								<li><a href="#">Google App Engeneer</a></li>
+								<li><a href="#">Graphic Designers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">H</span>
+							<ul>
+								<li><a href="#">HTML Programmers</a></li>
+								<li><a href="#">HTML5 Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">I</span>
+							<ul>
+								<li><a href="#">Illustrator Designers</a></li>
+								<li><a href="#">Iphone Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">J</span>
+							<ul>
+								<li><a href="#">Java Programmers</a></li>
+								<li><a href="#">JavaScript Programmers</a></li>
+								<li><a href="#">Joomla Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">L</span>
+							<ul>
+								<li><a href="#">LAMP Programmers</a></li>
+								<li><a href="#">Linux Programmers</a></li>
+								<li><a href="#">Logo Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">M</span>
+							<ul>
+								<li><a href="#">MAC OS Programmers</a></li>
+								<li><a href="#">Magento Programmers</a></li>
+								<li><a href="#">Mobile Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">N</span>
+							<ul>
+								<li><a href="#">Newsletter Writers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">O</span>
+							<ul>
+								<li><a href="#">Office Writers</a></li>
+								<li><a href="#">Online Writers</a></li>
+								<li><a href="#">Oracle Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">P</span>
+							<ul>
+								<li><a href="#">PayPal Programmers</a></li>
+								<li><a href="#">Photoshop Designers</a></li>
+								<li><a href="#">Palm Programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">R</span>
+							<ul>
+								<li><a href="#">Ruby on Rails</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">S</span>
+							<ul>
+								<li><a href="#">Salesforce programmers</a></li>
+								<li><a href="#">SAP programmers</a></li>
+								<li><a href="#">SEM Consultant</a></li>
+								<li><a href="#">SEO Consultant</a></li>
+								<li><a href="#">Software Testing Programmers</a></li>
+								<li><a href="#">SQL programmers</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="tag">T</span>
+							<ul>
+								<li><a href="#">Transcriptionists</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="community-block">
+				<div class="container">
+					<p>
+						Join the toptal community. <span class="wh-text">Apply to work with us a </span>
+						<span class="b-devc">
+							<a href="#" class="btn-white btn-radius">Developer</a>
+							<em>or</em>
+							<a href="#" class="btn-white btn-radius">Client</a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</main>
+		<footer id="footer">
+			<div class="container">
+				<div class="top-footer">
+					<div class="about-f f-block">
+						<h5>About toptal</h5>
+						<p>TopTal connects start-ups, businesses, ans organisation to a growing network of the best developers in the world. Our engineers are available full or part-time and are adle to seamlessly integrate into your team.</p>
+					</div>
+					<div class="faq list-link f-block">
+						<h5>FAQ</h5>
+						<ul>
+							<li><a href="#">How can I join toptall</a></li>
+							<li><a href="#">What requirements a have to meet?</a></li>
+							<li><a href="#">How do you pay me?</a></li>
+							<li><a href="#">Lorem ipsum dolor?</a></li>
+							<li><a href="#">Rokok ini nulla facilic?</a></li>
+						</ul>
+					</div>
+					<div class="navigation f-block">
+						<ul>
+							<li><a href="#">What</a></li>
+							<li><a href="#">Why</a></li>
+							<li><a href="#">How</a></li>
+							<li><a href="#">Clients</a></li>
+							<li><a href="#">Team</a></li>
+							<li><a href="#">Labs</a></li>
+						</ul>
+					</div>
+					<div class="contact list-link f-block">
+						<h5>Contact</h5>
+						<ul>
+							<li><a href="#">Join us</a></li>
+							<li><a href="#">Send us e-mail</a></li>
+							<li><a href="#">Follow us on twitter</a></li>
+							<li><a href="tel:888-323-4422">Call 888.323.4422</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bot-footer clearfix">
+					<span class="copiright">
+						Copiright 2011 TopTal Development Inc.
+					</span>
+					<ul class="pravp">
+						<li>
+							<a href="#">Privacy policy</a>
+						</li>
+						<li>
+							<a href="#">Term of use</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+#header {
+  background: #000;
+  padding: 10px 0;
+  color: #fff;
+}
+.logo {
+  display: inline-block;
+  margin-right: 15px;
+
+  a {
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+.logo-desc {
+  color: #818181;
+  font-style: italic;
+  @include media ('<=phone') {
+    display: block;
+  }
+}
+.hl-column,
+.hr-column {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  margin-right: -4px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+
+  @include media ('<=tablet') {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.hr-column {
+  text-align: right;
+  @include media ('<=sdesktop') {
+    span {
+      display: none;
+    }
+  }
+  @include media ('<=tablet') {
+    text-align: left;
+  }
+  @include media ('<=phone') {
+    text-align: center;
+
+    a {
+      margin-bottom: 10px;
+    }
+  }
+}
+.btn-info {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #7f7f7f;
+  padding: 6px 9px;
+  margin-left: 14px;
+
+  &:hover {
+    opacity:0.8;
+  }
+}
+.menu-open .general-nav {
+  left: 0;
+}
+.general-nav {
+  float: left;
+  padding: 0 15px;
+  margin-bottom:15px;
+  @include media ('<=tablet') {
+    position: absolute;
+    left: -320px;
+    top: 0;
+    width: 300px;
+    background: #000;
+    padding: 10px 0;
+    z-index: 20;
+    li {
+      width: 100%;
+      a {
+        padding: 5px 10px;
+        display: inline-block;
+      }
+    }
+  }
+  ul {
+    @extend %listreset;
+  }
+  li {
+    display: inline-block;
+    padding: 0 5px;
+
+
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.phone {
+  float: right;
+  padding: 0 15px;
+  margin-bottom: 15px;
+
+  @include media ('<=tablet') {
+    float: left;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.menu-opener{
+  float: right;
+  width:40px;
+  height:40px;
+  background:#000;
+  position:relative;
+  display: none;
+
+  @include media ('<=tablet') {
+    display: inline-block;
+  }
+}
+.menu-opener:before,
+.menu-opener:after,
+.menu-opener span{
+  background:#fff;
+  position:absolute;
+  top:50%;
+  left:25%;
+  right:25%;
+  height:4px;
+  margin-top:-2px;
+  transition:all 0.2s linear;
+}
+.menu-opener:before,
+.menu-opener:after{
+  content:'';
+  top:30%;
+}
+.menu-opener:after{top:70%;}
+.menu-open .menu-opener span{opacity:0;}
+.menu-opener:hover{opacity:.9;}
+.menu-open .menu-opener:after,
+.menu-open .menu-opener:before{
+  -moz-transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  transform:rotate(45deg);
+  top:50%;
+  left:15%;
+  right:15%;
+}
+.menu-open .menu-opener:after{
+  -moz-transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+.p-date {
+  padding: 40px 0 30px;
+  color: #4d4d4d;
+}
+.personal-info {
+  display: flex;
+  border: 1px solid #e6e6e6;
+  background: #e6e6e5;
+
+  @include media ('<=desktop') {
+    flex-wrap: wrap;
+    .p-img{
+      order: 1;
+    }
+    .info {
+      order: 2;
+      min-height: auto;
+    }
+    .block-2 {
+      order: 3;
+      min-height: auto;
+    }
+  }
+
+
+  input {
+    outline: none;
+    background: transparent;
+    border-color: transparent;
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 3px;
+    padding-right: 27px;
+
+    &:hover {
+      border: 1px solid #b8b8b8;
+    }
+
+    &:focus {
+      background: #fff;
+    }
+    &::-webkit-input-placeholder {
+      color: #4d4d4d;
+      font-weight: bold;
+    }
+    &::-moz-placeholder {
+      color: #4d4d4d;
+      font-weight: bold;
+    }
+    &:-moz-placeholder {
+      color: #4d4d4d;
+      font-weight: bold;
+    }
+    &:-ms-input-placeholder {
+      color: #4d4d4d;
+      font-weight: bold;
+    }
+  }
+}
